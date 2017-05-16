@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
 	<title>Document</title>
 	<link rel="stylesheet" href="./css/sm.css">
+    <link rel="stylesheet" href="./css/sm-extend.css">
 	<script type='text/javascript' src='./js/zepto.js' charset='utf-8'></script>
 </head>
 <body>
@@ -17,7 +18,18 @@
                 <a class="icon icon-me pull-left open-panel"></a>
                 <h1 class="title">标题</h1>
             </header>
-
+<!-- 轮播图片 -->
+<div class="content">
+  <!-- Slider -->
+  <div class="swiper-container" data-space-between='10'>
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="./imgs/TB1n3rZHFXXXXX9XFXXXXXXXXXX_!!0-item_pic.jpg_320x320q60.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="./imgs/TB10rkPGVXXXXXGapXXXXXXXXXX_!!0-item_pic.jpg_320x320q60.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="./imgs/TB1kQI3HpXXXXbSXFXXXXXXXXXX_!!0-item_pic.jpg_320x320q60.jpg" alt=""></div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</div>
             <!-- 工具栏 -->
             <nav class="bar bar-tab">
                 <a class="tab-item external active" href="#">
@@ -61,6 +73,13 @@
 
 
 <script type='text/javascript' src='./js/sm.js' charset='utf-8'></script>
-  <!-- <script>$.init()</script> -->
+<script type='text/javascript' src='./js/sm-extend.js' charset='utf-8'></script>
+
+//   <script>
+// $(function() {
+//   $(".swiper-container").swiper(config);
+// });
+//   $.init()
+//   </script>
 </body>
 </html>
