@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="./css/sm.css">
+<!--     <link rel="stylesheet" href="./css/sm-extend.css"> -->
+	<script type='text/javascript' src='./js/zepto.js' charset='utf-8'></script>
+</head>
+<body>
+
+<div class="content">
+    <div class="content-block">
+      <p><a href="#" class="alert-text">Alert With Text</a></p>
+      <p><a href="#" class="alert-text-title">Alert With Text and Title</a></p>
+      <p><a href="#" class="alert-text-title-callback">Alert With Text and Title and Callback</a></p>
+      <p><a href="#" class="alert-text-callback">Alert With Text and Callback</a></p>
+    </div>
+  </div>
+
+
+
+<script type='text/javascript' src='./js/sm.js' charset='utf-8'></script>
+<!-- <script type='text/javascript' src='./js/sm-extend.js' charset='utf-8'></script> -->
+<script>
+	
+     $(document).on('click','.alert-text',function () {
+        $.alert('Here goes alert text');
+     });
+
+    $(document).on('click','.alert-text-title', function () {
+        $.alert('Here goes alert text', 'Custom Title!');
+    });
+
+    $(document).on('click', '.alert-text-title-callback',function () {
+        $.alert('Here goes alert text', 'Custom Title!', function () {
+            $.alert('Button clicked!')
+        });
+    });
+
+    $(document).on('click', '.alert-text-callback',function () {
+        $.alert('Here goes alert text', function () {
+            $.alert('Button clicked!')
+        });
+    });
+
+</script>
+</body>
+</html>
