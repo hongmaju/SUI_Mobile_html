@@ -12,10 +12,11 @@
 
 <div class="content">
     <div class="content-block">
-      <p><a href="#" class="alert-text">Alert With Text</a></p>
-      <p><a href="#" class="alert-text-title">Alert With Text and Title</a></p>
-      <p><a href="#" class="alert-text-title-callback">Alert With Text and Title and Callback</a></p>
-      <p><a href="#" class="alert-text-callback">Alert With Text and Callback</a></p>
+      <p><a href="#" class="alert-text">弹出文本</a></p>
+      <p><a href="#" class="alert-text-title">弹出文本和标题</a></p>
+      <p><a href="#" class="alert-text-title-callback">弹出文本、标题和回调</a></p>
+      <p><a href="#" class="alert-text-callback">弹出文本、回调</a></p>
+      <p><a href="#" class="alert-text-callback-empty">弹出自定义文本内容和回调</a></p>
     </div>
   </div>
 
@@ -42,6 +43,11 @@
     $(document).on('click', '.alert-text-callback',function () {
         $.alert('Here goes alert text', function () {
             $.alert('Button clicked!')
+        });
+    });
+     $(document).on('click', '.alert-text-callback-empty',function () {
+        $.alert('Here goes alert text', function () {
+            // $.alert('Button clicked!')
         });
     });
 
