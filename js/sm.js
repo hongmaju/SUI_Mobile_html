@@ -1313,6 +1313,17 @@ Device/OS Detection
             buttons: [ {text: defaults.modalButtonOk, bold: true, onClick: callbackOk} ]
         });
     };
+        $.alertEmpty = function (text, title, callbackOk) {
+        if (typeof title === 'function') {
+            callbackOk = arguments[1];
+            title = undefined;
+        }
+        return $.modal({
+            text: text || '',
+            title: typeof title === 'undefined' ? defaults.modalTitle : title,
+            // buttons: [ {text: defaults.modalButtonOk,modalButtonCancel, bold: true, onClick: callbackOk} ]
+        });
+    };
     $.confirm = function (text, title, callbackOk, callbackCancel) {
         if (typeof title === 'function') {
             callbackCancel = arguments[2];

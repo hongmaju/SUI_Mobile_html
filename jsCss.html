@@ -7,6 +7,11 @@
 	<link rel="stylesheet" href="./css/sm.css">
 <!--     <link rel="stylesheet" href="./css/sm-extend.css"> -->
 	<script type='text/javascript' src='./js/zepto.js' charset='utf-8'></script>
+	<style>
+		.modal-buttons a {
+    width: 100%;
+}
+	</style>
 </head>
 <body>
 
@@ -46,10 +51,15 @@
         });
     });
      $(document).on('click', '.alert-text-callback-empty',function () {
-        $.alert('Here goes alert text', function () {
+        $.alertEmpty(alertHtml(), function () {
             // $.alert('Button clicked!')
         });
     });
+
+     function alertHtml(){
+   
+     	return " <div class=\"item-content\"><div class=\"item-media\"><i class=\"icon icon-form-name\"></i></div><div class=\"item-inner\"><div class=\"item-title label\">姓名</div><div class=\"item-input\"><input type=\"text\" placeholder=\"Your name\"></div></div></div><div class=\"content-block\"><div class=\"row\"><div class=\"col-50\"><a href=\"#\" class=\"button button-big button-fill button-danger\">取消</a></div><div class=\"col-50\"><a href=\"#\" class=\"button button-big button-fill button-success\">提交</a></div></div></div>";
+     }
 
 </script>
 </body>
